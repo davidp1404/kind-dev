@@ -11,3 +11,4 @@ kind create cluster --config kind-config.json
 docker update kind-worker --cpus 2 --memory 4G --memory-swap 4G
 docker update kind-worker2 --cpus 2 --memory 4G --memory-swap 4G
 docker update kind-worker3 --cpus 2 --memory 4G --memory-swap 4G
+kubectl label nodes kind-worker kind-worker2 kind-worker3 node-role.kubernetes.io/worker=worker
