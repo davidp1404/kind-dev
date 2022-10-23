@@ -22,13 +22,7 @@ nodes:
     protocol: TCP
 - role: worker
   image: kindest/node:v1.24.6
-  labels:
-    node-role.kubernetes.io/worker: worker
 - role: worker
   image: kindest/node:v1.24.6
-  labels:
-    node-role.kubernetes.io/worker: worker
 - role: worker
   image: kindest/node:v1.24.6
-  labels:
-    node-role.kubernetes.io/worker: worker

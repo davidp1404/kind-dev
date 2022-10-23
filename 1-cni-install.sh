@@ -1,5 +1,5 @@
 helm repo add cilium https://helm.cilium.io/
-helm repo update cilium
+helm repo update 
 docker pull cilium/cilium:v1.11.10
 kind load docker-image cilium/cilium:v1.11.10
 helm install cilium cilium/cilium --version 1.11.10 \

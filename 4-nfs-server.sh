@@ -3,7 +3,7 @@
 # It's expected that you run a nfs-server instance in the IP set
 
 helm repo add nfs-subdir-external-provisioner https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner/
-helm repo update nfs-subdir-external-provisioner
+helm repo update
 helm -n kube-system install nfs-subdir-external-provisioner nfs-subdir-external-provisioner/nfs-subdir-external-provisioner \
     --set nfs.server=172.18.0.1 \
     --set nfs.path=/mnt/nfs_share \
