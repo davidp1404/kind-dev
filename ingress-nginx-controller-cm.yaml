@@ -1,0 +1,18 @@
+apiVersion: v1
+data:
+  allow-snippet-annotations: "true"
+  client-body-buffer-size: 32M
+  proxy-body-size: 1G
+  proxy-buffering: "off"
+  proxy-read-timeout: "600"
+  proxy-send-timeout: "600"
+kind: ConfigMap
+metadata:
+  labels:
+    app.kubernetes.io/component: controller
+    app.kubernetes.io/instance: ingress-nginx
+    app.kubernetes.io/name: ingress-nginx
+    app.kubernetes.io/part-of: ingress-nginx
+    app.kubernetes.io/version: 1.4.0
+  name: ingress-nginx-controller
+  namespace: ingress-nginx

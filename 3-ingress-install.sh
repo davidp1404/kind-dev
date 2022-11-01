@@ -6,3 +6,5 @@ kubectl wait --namespace ingress-nginx \
   --selector=app.kubernetes.io/component=controller \
   --timeout=90s
 kubectl -n ingress-nginx patch svc ingress-nginx-controller -p '{"spec":{"type":"LoadBalancer"}}'
+kubectl -n ingress-nginx replace -f ingress-nginx-controller-cm.yaml
+kubectl -n ingress-nginx delete pod --all
